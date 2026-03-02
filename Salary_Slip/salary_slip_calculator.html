@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Slip Calculator</title>
+    <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 20px; }
+    .row { margin: 8px 0; }
+    label { display:inline-block; width: 140px; }
+    input { width: 160px; padding: 6px; }
+    button { padding: 8px 12px; margin-top: 8px; }
+    .output { margin-top: 16px; border-top: 1px solid #ddd; padding-top: 12px; }
+    .num { font-weight: 600; }
+  </style>
+</head>
+<body>
+    <h2>Salary Slip</h2>
+
+    <div class="row">
+        <label for="empName">Employee Name</label>
+        <input id="empName" type="text" placeholder="e.g., Sameera">
+    </div>
+
+    <div class="row">
+        <label for="basic">Basic Salary (₹)</label>
+        <input id="basic" type="number" placeholder="e.g., 35000">
+    </div>
+
+    <button id="calcBtn">Calculate</button>
+
+    <div class="output">
+        <p id="oName"></p>
+        <p id="oHra"></p>
+        <p id="oDa"></p>
+        <p id="oPf"></p>
+        <p id="oGross"></p>
+        <p id="oNet" class="num"></p>
+    </div>
+    <!-- <script src="./salary_slip_calculator.js"></script> -->
+</body>
+</html>

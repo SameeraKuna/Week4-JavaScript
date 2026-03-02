@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Shopping Cart Billing</title>
+<style>
+  body 
+  { font-family: Arial, sans-serif; margin: 20px; }
+  .row 
+  { margin: 8px 0; }
+  label 
+  { display: inline-block; width: 50px; margin-left: 30px; }
+  input 
+  { width: 100px; }
+  .result
+  { margin-top: 12px; }
+</style>
+</head>
+<body>
+
+  <h2>Shopping Cart Billing</h2>
+
+  <!-- Item 1 -->
+  <div class="row">
+    <label for="i1">Item</label>
+    <input type="text" id="i1">
+    <label>Price:</label>
+    <input id="p1" type="number" value="0">
+    <label>Qty:</label>
+    <input id="q1" type="number" value="0">
+  </div>
+
+  <!-- Item 2 -->
+  <div class="row">
+    <label for="i2">Item</label>
+    <input type="text" id="i2">
+    <label>Price:</label>
+    <input id="p2" type="number" value="0">
+    <label>Qty:</label>
+    <input id="q2" type="number" value="0">
+  </div>
+
+  <!-- Item 3 -->
+  <div class="row">
+    <label for="i3">Item</label>
+    <input type="text" id="i3">
+    <label>Price:</label>
+    <input id="p3" type="number" value="0">
+    <label>Qty:</label>
+    <input id="q3" type="number" value="0">
+  </div>
+
+  <button id="calcBtn">Calculate</button>
+
+  <div class="result">
+    <p id="line1">Item 1 total: ₹0</p>
+    <p id="line2">Item 2 total: ₹0</p>
+    <p id="line3">Item 3 total: ₹0</p>
+    <p id="subtotal">Subtotal: ₹0</p>
+    <p id="discountPct">Discount %: 0%</p>
+    <p id="final">Final: ₹0</p>
+  </div>
+  <script src="./shopping_cart_billing.js"></script>
+</body>
+</html>
