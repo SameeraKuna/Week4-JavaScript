@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+</head>
+<body>
+    <h1>Area Calculator</h1>
+    <p>Choose a shape, to display its area. Entire values accordingly and click <strong>Calculate</strong>.</p>
+    <br />
+    <!-- Shape selector -->
+    <label for="shape">Shape</label>
+    <select id="shape">
+      <option value="" selected disabled>-- Select a shape --</option>
+      <option value="rectangle">Rectangle</option>
+      <option value="square">Square</option>
+      <option value="circle">Circle</option>
+      <option value="triangle">Triangle</option>
+    </select>
+    <br /><br />
+     
+     <!--For Rectangle -->
+    <div id="rectangle" style="display:none;">
+        <label for="rLength">Length <span class="units">(eg. cm)</span></label>
+        <input type="number" id="rLength" min="0" step="any" placeholder="Enter length">
+        <br /><br />
+        <label for="rWidth">Width <span class="units">(eg. cm)</span></label>
+        <input type="number" id="rWidth" min="0" step="any" placeholder="Enter width">
+        <br /><br />
+    </div>
+    <!-- Inputs: Square -->
+    <div id="square" style="display:none;">
+        <label for="sqSide">Side <span class="units">(eg. cm)</span></label>
+        <input type="number" id="sqSide" min="0" step="any" placeholder="Enter side length">
+    <br /><br />
+    </div>
+    <!-- Inputs: Circle -->
+    <div id="circle" style="display:none;">
+    Radius(eg. cm):<input type="number" id="cRadius" min="0" step="any" placeholder="Enter radius">
+    <br /><br />
+    </div>
+    <!-- Inputs: Triangle -->
+    <div id="triangle" style="display:none;">
+    <label for="triBase">Base <span class="units">(eg. cm)</span></label>
+    <input type="number" id="triBase" min="0" step="any" placeholder="Enter base"> 
+    <br /><br />
+    <label for="triHeight">Height <span class="units">(eg. cm)</span></label>
+    <input type="number" id="triHeight" min="0" step="any" placeholder="Enter height">
+    <br /><br />
+    </div>
+    <!-- Actions -->
+    <button onclick="calculateArea()">Calculate</button>
+    <button onclick="resetAll()">Reset</button>
+    <br />
+     <h3 id="result"></h3>
+     <br />
+    <footer><em><strong>Formulas: Rectangle = l × w · Square = side² · Circle = π × r² · Triangle = (base × height)/2</strong></em></footer>
+  </div>
+  <script src="./area_calculator.js"></script>
+</body>
+</html>
