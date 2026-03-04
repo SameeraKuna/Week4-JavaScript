@@ -1,0 +1,35 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto; margin: 24px; }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin-bottom:20px;
+  }
+
+  .menu a {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #334155;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+
+  .menu a:hover, .menu a:focus {
+    background: #e2e8f0;
+    outline: none;
+  }
+
+  .menu a.active {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 700;
+  }
+/* Dummy Sections */
+  section { 
+    padding: 10px 0; 
+    border-top: 1px solid #e5e7eb;
+    margin-top: 10px; 
+    }

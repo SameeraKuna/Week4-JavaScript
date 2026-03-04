@@ -1,0 +1,62 @@
+<!--Highlight Active Menu Item 
+Goal: Create a navigation bar where the clicked menu item becomes “active”. 
+Constraints: Only one item can be active at a time; state must persist visually after click. 
+Steps: 
+Render a horizontal list of 5 links. 
+When a link is clicked, visually highlight it and remove highlight from any previously active item. 
+Prevent page jump if using hash links. 
+Success: Exactly one item looks active at any time, even after multiple clicks.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Active Menu Item</title>
+    <link rel="stylesheet" href="./Highlight_Active_Menu_Item.css">
+</head>
+<body>
+    <nav class="nav">
+        <ul id="menu" class="menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to my page!</p>
+    </section>
+    <section id="features">
+        <h2>Features</h2>
+        <p>List of features include....</p>
+        <ul>
+            <li>Feature1</li>
+            <li>Feature2</li>
+            <li>Feature3</li>
+        </ul>
+    </section>
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <p>Different pricing plans include.................</p>
+    </section>
+    <section id="about">
+        <h2>About</h2>
+        <p>About us..........</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>Name: Sameera Kuna</li>
+            <li>Email: samee@123.email.com</li>
+            <li>Contact:9876543210</li>
+        </ul>
+    </section>
+
+</body>
+</html>
+    <script src="./Highlight_Active_Menu_Item.js"></script>
+</body>
+</html>

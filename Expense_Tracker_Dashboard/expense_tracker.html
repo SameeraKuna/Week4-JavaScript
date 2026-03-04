@@ -1,0 +1,163 @@
+<!-- Task
+Build a single‑page expense tracker dashboard where users can: 
+Add expenses 
+Categorize them 
+Delete / Edit 
+See totals 
+Filter by category/date 
+
+1️⃣ Header 
+App Title: “Expense Tracker Dashboard” 
+Theme Toggle (Light/Dark) 
+Total Balance displayed on right 
+Example: 
+Balance: ₹3,250 
+2️⃣ Add Expense Form  
+Fields: 
+Title (required) 
+Amount (required, number only) 
+Category (dropdown: Food, Travel, Bills, Shopping, Others) 
+Date (default: today) 
+Add Expense button 
+Validation: 
+Title cannot be empty 
+Amount must be positive 
+Red inline error under input when invalid 
+3️⃣ Expense List  
+Each expense should appear as a stylish card: 
+Title 
+Category badge with color 
+Amount (₹) 
+Date 
+Buttons: Edit | Delete 
+When clicking Edit, card slides into editable mode. 
+Delete removes the card after a confirmation prompt. 
+Cards should have:
+Rounded corners 
+Shadow/light hover effect 
+Category-specific color badges 
+4️⃣ Filters Section (Horizontal Bar) 
+All 
+Food 
+Travel 
+Bills 
+Shopping 
+Others 
+This Month 
+Last 7 Days 
+Clicking filters updates list instantly via DOM changes. 
+5️⃣ Statistics Section (Small Panel) 
+Live-updating details: 
+Total Expenses 
+Total per category 
+Highest Expense 
+Lowest Expense 
+Average Expense 
+Updates automatically on: 
+Add 
+Edit 
+Delete 
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Dashboard</title>
+    <link rel="stylesheet" href="./expense_tracker.css">
+</head>
+<body>
+    <!-- Heading -->
+    <div class="head">
+        <h1><em>Expense Tracker Dashboard</em></h1>
+        <!-- Toogle button -->
+        <div class="toggle_balance">
+            <label class="theme-toggle">
+            <input type="checkbox" id="toggleBtn"> &nbsp<span>Dark Mode</span>
+            </label>
+            <p><strong>Balance: ₹0 </strong></p>
+         </div>
+    </div>
+    <!-- Form to add expense -->
+    <p id="p1"><strong><u>Add a new expense:</u></strong></p>
+           
+        <form>
+            <div class="form">
+            <div class="form-item">
+                <label for="title">Title<span style="color: red;">*</span></label>
+                <input id="title" type="text" placeholder="e.g., Dinner at restaurant" required />
+            </div>
+            
+            <div class="form-item">
+                <label for="amount">Amount (₹)<span style="color: red;">*</span></label>
+                <input id="amount" type="number" inputmode="decimal" min="0.01" placeholder="e.g. 100" required />
+            </div>
+
+            <div class="form-item">
+                <label for="category">Category</label>
+                <select id="category">
+                <option>--Choose--</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Bills</option>
+                <option>Shopping</option>
+                <option>Others</option>
+            </select>
+            </div>
+
+            <div class="form-item">
+                <label for="date">Date</label>
+                <input id="date" type="date" />
+            </div>
+            
+            <div class="form-item">
+                <button type="submit">Add Expense</button> 
+            </div>
+         </div>     
+      </form>
+   
+    <!-- Buttons for filters -->
+    <div class="filter">
+        <button class="filter-btn All">All</button>
+        <button class="filter-btn Food">Food</button>
+        <button class="filter-btn Travel">Travel</button>
+        <button class="filter-btn Bills">Bills</button>
+        <button class="filter-btn Shopping">Shopping</button>
+        <button class="filter-btn Others">Others</button>
+        <button class="filter-btn This Month">This Month</button>
+        <button class="filter-btn Last 7days">Last 7days</button>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div> 
+            Title: Food at Zuri
+            <hr>
+        </div>
+        <div> 
+            Category: Food
+        </div>
+        <div> 
+            Amount(₹): 5000/-
+        </div>
+        <div> 
+            Date: 01-02-2026
+        </div>
+         <div> 
+            <button type="button">Edit</button> 
+            <button type="button">Delete</button> 
+        </div>
+
+    </div>
+
+     <!-- Statistics Section -->
+    <br />
+    <div class="statistics">
+        <div>Total Expenses: </div>
+        <div>Total per Category: </div>
+        <div>Highest Expense: </div>
+        <div>Lowest Expense: </div>
+        <div>Average Expense: </div>
+    </div>
+    <script src="./expense_tracker.js"></script>
+</body>
+</html>

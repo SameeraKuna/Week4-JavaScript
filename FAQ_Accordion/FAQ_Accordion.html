@@ -1,0 +1,52 @@
+<!--FAQ Accordion (Single-Open) 
+Goal: Build an FAQ where clicking a question toggles its answer. 
+Constraints: Only one answer open at a time; clicking an open question closes it. 
+Steps: 
+Render 6 questions stacked vertically; answers are hidden by default. 
+Clicking a question reveals its answer; any other open answer closes. 
+Add a visual indicator (e.g., “+” and “–”) that toggles based on state. 
+Success: One answer visible maximum; indicator reflects open/closed state.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="./FAQ_Accordion.css">
+</head>
+<body>
+    <div class="faq">
+
+        <div class="faq-item">
+            <div class="faq-question">
+            What is an accordion?
+            <span class="indicator">+</span>
+            </div>
+            <div class="faq-answer">
+            An accordion is a UI pattern where sections expand or collapse.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+            <span>How does it work?</span>
+            <span class="indicator">+</span>
+            </div>
+            <div class="faq-answer">
+            It opens on click and closes when another is opened.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+            <span>Why do use accordions?</span>
+            <span class="indicator">+</span>
+            </div>
+            <div class="faq-answer">
+            To reduce clutter and show content only when needed.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
