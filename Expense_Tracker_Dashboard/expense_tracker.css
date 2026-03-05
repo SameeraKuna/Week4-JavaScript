@@ -1,34 +1,32 @@
-/* Defines Light Theme  for entire root*/
-:root {
-  --bg: #ffffff;
-  --text: #000000;
-}
-/* Body changes dark when checkbox is checked */
-body.dark {
-  --bg: #1e293b;
-  --text: #f8fafc;
-}
-/* Apply variables */
+/* For toggling background */
 body {
   padding: 0;
   margin: 20px;
   box-sizing: border-box;
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s;
-} 
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 .head{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 1px solid rgb(113, 154, 0);
+    border-radius: 20px;
+    background-color: #dbef03;
+    color: #373c01;
 } 
 .toggle_balance{
     display:flex;
     flex-direction: column;
-    padding-right: 20em;
+    padding-right: 8em;
 } 
-#p1{
-    font-size: large;
+h1{
+    padding-left: 1em;
+}
+h3{
+    text-align: center;
 }
 .form{
     border: 3px solid;
@@ -38,11 +36,15 @@ body {
     justify-content: space-evenly;
     gap: 20px;
 }
-
 .filter{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     padding: 30px;
+}
+.filter-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 30px
 }
 .filter button{
     border: 2px solid;
@@ -54,18 +56,4 @@ button{
     border: 2px solid;
     border-radius: 30px;
     padding: 10px;
-}
-.del-btn 
-    { background: transparent; border: 1px solid #e33; color: #e33; padding: 4px 8px; border-radius: 4px; cursor: pointer; }
-.del-btn:hover 
-    { background: #f4a5a5; }
-.edit-btn 
-    { background: transparent; border: 1px solid rgb(241, 235, 70); color: rgb(224, 205, 81); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
-.edit-btn:hover 
-    { background: #f4f4a5; }
-.card{
-    border: 2px solid;
-    border-radius:10px;
-    display: inline-block;
-    padding: 20px;
 }
