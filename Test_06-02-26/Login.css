@@ -1,0 +1,56 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: radial-gradient(rgb(172, 237, 172),rgb(229, 181, 189));
+}
+h1{
+    margin-bottom: 30px;
+    color: rgb(0, 67, 0);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+.email, .password{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border: 2px inset green;
+    border-radius: 20px; 
+    background-color: antiquewhite;
+}
+input{
+    width: 250px;
+    border: 2px inset green;
+    border-radius: 20px;
+    padding: 5px;
+}
+label{
+    color: rgb(1, 69, 1);
+    font-weight: 900;
+}
+.border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-btn{
+    
+    border: 2px inset green;
+    background-color: rgb(62, 122, 1);
+    border-radius: 10px;
+    color: white;
+    padding: 8px 20px 8px 20px;  
+}
+.login-btn:focus{
+    border: 2px inset rgb(238, 242, 238);
+    background-color: rgb(232, 234, 230);
+    border-radius: 10px;
+    color: rgb(62, 122, 1);
+    padding: 8px 20px 8px 20px;  }
